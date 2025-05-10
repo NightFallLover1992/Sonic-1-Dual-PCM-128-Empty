@@ -1,0 +1,36 @@
+Before I start this guide, let me first start by thanking LuigiXHero for teaching me how to do this.
+If it weren't for him I wouldn't know how to do anything of this, so here we go.
+
+I've noticed that in the hacking community, not many people know how to actually make custom artwork for
+ROM hacks. So, not only have I created a disassembly specifically for this purpose, but also decided to
+make a simple public guide that teaches people how to easily import art. So here we go.
+
+First you'll need the following tools:
+-A basic Paint program (I use Paint.NET but you can use whatever)
+-a tool called "InfanView"
+-SonLVL
+
+So here we go!
+First, before we start anything, make sure that for the level you're importing the art into, you first
+delete all of the chunks/blocks/tiles. If you're using the Empty Sonic 1 disassembly, you wouldn't have to
+worry about this.
+
+Next, you're going to want to make a little spritesheet which will contain all the art you'll be importing.
+If you're importing chunks, you'll want to make sure the size of the picture is a multiple of 128 (or 256).
+If you're importing blocks, you'll want it to be a multiple of 16.
+
+Anyways, once you've saved the art, you then want to open the file in IrfanView. Then, you'll want to go to
+Image>Decrease Color Depth. At this point, you're going to want to then set the Color Depth to 4BPP (16 colors)
+Once this is done, you're going to want to go to Image>Palette>Edit Palette.
+
+Here, you're going to see all the colors used. This is where SonLVL comes in. You'll notice that in InfanView
+it shows the RGB values. You want to take these values and copy them into the color palette. Once you've copied
+all the colors, you're going to want to then export the color palette as a JASC-PAL.
+
+After you've exported the palette and put the palette file somewhere, you want to go back to InfanView, and
+go to Image>Palette>Import Palette. From here, you want to select the palette file you exported. After this,
+you want to then save the picture.
+
+Finally, you want to go in SonLVL, and in the Art section, you want to go to the chunks and simply import the art.
+Make sure you have the correct palette line selected, by the way! Then after this, you're done and you can now
+use the art in the level and give the blocks collisions.
